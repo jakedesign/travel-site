@@ -47,9 +47,12 @@ button {
     cursor: pointer;
 }
 
+button:hover {
+    background-color: rgb(255, 143, 83);
+}
 
 
-/* NAV SECTION */
+/**************** NAV SECTION ****************/
 
 .header-wrapper {
     background-color: rgb(255, 255, 255);
@@ -81,6 +84,7 @@ nav ul li {
     font-size: 1.8rem;
 }
 
+/**************** HERO ****************/
 
 .hero {
     background-image: linear-gradient(rgba(79, 30, 4, 0.85),transparent),url(./images/plane2.jpg);
@@ -104,4 +108,202 @@ nav ul li {
     padding: 3rem;
     font-size: 3rem;
     font-weight: 300;
+}
+
+/**************** LOCATION SECTIONS ****************/
+
+#locations{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4),transparent),url(../images/new-york-page.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.locations-head {
+    width: 90%;
+    margin: auto;
+    color: rgb(22, 22, 22);
+}
+
+.locations-head h2{
+    font-size: 4.5rem;
+    padding: 1rem 0;
+    text-decoration: underline;
+    text-decoration-thickness: 0.5rem;
+}
+
+.locations-head h3 {
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.5;
+    padding: 4rem 0;
+    max-width: 70rem;
+    background: linear-gradient(#1e1e1f, #813d0f);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.cloud {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+
+.moving-cloud-1 {
+    z-index: 1;
+    animation: cloudAnimation 3.5s infinite alternate ease-in-out;
+}
+
+.moving-cloud-2 {
+    top: 20%;
+    z-index: -1;
+    opacity: 0.5;
+    animation: cloudAnimation 9s infinite alternate ease;
+}
+
+@keyframes cloudAnimation {
+    from{
+        transform: translate(7%, -4%);
+    }
+    to{
+        transform: translate(0%, 0%);
+    }
+}
+
+/**************** BENEFITS SECTION ****************/
+
+.benefits-head {
+    background-color: rgb(163, 77, 6);
+    height: 30vh;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.benefits-head h2 {
+    font-size: 4rem;
+}
+.benefits-head h3 {
+    padding: 1rem;
+    font-size: 2.5rem;
+    font-weight: 300;
+    max-width: 41%;
+    line-height: 1.5;
+}
+
+.cards {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    min-height: 70vh;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card {
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    flex: 1 1 30rem;
+    min-height: 40vh;
+    margin: 2rem 3rem;
+    text-align: center;
+}
+
+.card h4 {
+    padding: 3rem;
+}
+
+.card p {
+    padding: 3rem;
+}
+
+.cards img {
+    max-width: 15%;
+    margin: 2rem;
+}
+
+.card-head {
+    background-color: rgba(230, 131, 45, 0.541);
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/**************** CONTACT SECTION ****************/
+
+#contact {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2),transparent), 
+        url(/images/contact-mountain.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-wrapper {
+    background-color: rgba(160, 81, 45, 0.561);
+    width: 65%;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.form-head {
+    text-align: center;
+    padding: 4rem;
+}
+.form-head h2 {
+    font-size: 5rem;
+}
+.name-form, 
+.email-form {
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
+}
+.form-wrapper label {
+    margin: 0rem 1rem;
+}
+
+.form-wrapper button {
+    width: 100%;
+    padding: 2rem;
+    border-radius: 0;
+    margin-top: 4rem;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.form-wrapper input {
+    padding: 1rem 3rem;
+    width: 25rem;
+    border: none;
+}
+
+
+/********************* MEDIA QUERY ********************/
+
+@media screen and (max-width: 630px) {
+    nav ul li {
+        margin-left: 2rem;
+    }
+    #logo {
+        font-size: 2rem;
+    }
+    .hero h2 {
+        font-size: 6rem;
+    }
+    .hero h3 {
+        font-size: 2rem;
+    }
 }
